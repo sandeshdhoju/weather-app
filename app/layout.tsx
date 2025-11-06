@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "ABI Interiors Weather App",
-  description: "Your simple and smart weather companion.",
+  description: "Your simple and smart weather companion",
 };
 
 export default function RootLayout({

@@ -17,7 +17,7 @@ const WeatherDisplay = ({ city }) => {
                 const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`);
 
                 if (!res.ok) {
-                    throw new Error(`Failed to fetch weather data. Plase try again with different city name.`);
+                    throw new Error(`Failed to fetch weather data. Please try again with different city name.`);
                 }
                 const data = await res.json();
                 const formatedData = {
@@ -31,6 +31,7 @@ const WeatherDisplay = ({ city }) => {
                     icon: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
                 }
                 setWeatherData(formatedData);
+                
                 sendToPipedream({
                         name: "Sandesh Dhoju",
                         city: formatedData?.name,

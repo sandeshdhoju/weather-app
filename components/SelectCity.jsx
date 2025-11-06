@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Select } from 'antd';
 import WeatherDisplay from './WeatherDisplay';
